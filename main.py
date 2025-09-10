@@ -56,4 +56,4 @@ async def consumcraft(ctx):
     await ctx.send(embed=embed)
 
 webserver.keep_alive() 
-bot.run(TOKEN, log_handler=handler, log_level=logging.DEBUG)
+bot.run(str(TOKEN), log_handler=handler, log_level=logging.DEBUG)
