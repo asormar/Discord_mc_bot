@@ -3,6 +3,7 @@ from discord.ext import commands
 import logging
 from dotenv import load_dotenv
 import os
+import webserver
 
 load_dotenv()
 TOKEN= os.getenv("DISCORD_TOKEN")
@@ -54,4 +55,5 @@ async def consumcraft(ctx):
     )
     await ctx.send(embed=embed)
 
+webserver.keep_alive() 
 bot.run(TOKEN, log_handler=handler, log_level=logging.DEBUG)
